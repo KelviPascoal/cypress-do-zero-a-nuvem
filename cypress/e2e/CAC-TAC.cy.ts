@@ -145,13 +145,13 @@ describe('central de atendimento ao cliente CAC-TAC', () => {
             })
     });
 
-    it.only('verifica que a política de privacidade abre em outra aba sem perder a aba original', () => {
+    it('verifica que a política de privacidade abre em outra aba sem perder a aba original', () => {
         cy.contains('a', 'Política de Privacidade')
             .should('have.attr', 'target', '_blank')
             .and('have.attr', 'href', 'privacy.html')
     })
 
-    it.only('acessa a pagina da politica de privacidade removendo o target e então clicando', () => {
+    it('acessa a pagina da politica de privacidade removendo o target e então clicando', () => {
         cy.contains('a', 'Política de Privacidade')
             .should('have.attr', 'target', '_blank')
             .and('have.attr', 'href', 'privacy.html')
